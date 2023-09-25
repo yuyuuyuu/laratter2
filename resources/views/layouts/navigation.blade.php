@@ -16,6 +16,41 @@
                         {{ __('ダッシュボード') }}
                     </x-nav-link>
                 </div>
+
+                <!-- 🔽 一覧ページへのリンクを追加 -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('expense.yearexpense')" :active="request()->routeIs('expense.yearexpense')">
+                        {{ __('年間支出') }}
+                    </x-nav-link>
+                </div>
+
+                <!-- 🔽 一覧ページへのリンクを追加 -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('expense.monthexpense')" :active="request()->routeIs('expense.monthexpense')">
+                        {{ __('月間支出') }}
+                    </x-nav-link>
+                </div>
+
+                <!-- 🔽 一覧ページへのリンクを追加 -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('expense.dayexpense')" :active="request()->routeIs('expense.dayexpense')">
+                        {{ __('１日支出') }}
+                    </x-nav-link>
+                </div>
+
+                <!-- 🔽 一覧ページへのリンクを追加 -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('expense.input')" :active="request()->routeIs('expense.input')">
+                        {{ __('入力') }}
+                    </x-nav-link>
+                </div>
+
+                <!-- 🔽 一覧ページへのリンクを追加 -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('expense.edit')" :active="request()->routeIs('expense.edit')">
+                        {{ __('編集') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
@@ -69,6 +104,41 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('ダッシュボード') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <!-- 🔽 一覧ページへのリンクを追加 -->
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('expense.yearexpense')" :active="request()->routeIs('expense.yearexpense')">
+                {{ __('年間支出') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <!-- 🔽 一覧ページへのリンクを追加 -->
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('expense.monthexpense')" :active="request()->routeIs('expense.monthexpense')">
+                {{ __('月間支出') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <!-- 🔽 一覧ページへのリンクを追加 -->
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('expense.dayexpense')" :active="request()->routeIs('expense.dayexpense')">
+                {{ __('１日支出') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <!-- 🔽 一覧ページへのリンクを追加 -->
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('expense.input')" :active="request()->routeIs('expense.input')">
+                {{ __('入力') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <!-- 🔽 一覧ページへのリンクを追加 -->
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('expense.edit')" :active="request()->routeIs('expense.edit')">
+                {{ __('編集') }}
             </x-responsive-nav-link>
         </div>
 

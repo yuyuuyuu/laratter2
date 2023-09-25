@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator;
-use App\Models\Product;
+use App\Models\Expense;
 
-class ProductController extends Controller
+class ExpenseController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return response()->view('product.index');
+        //
     }
 
     /**
@@ -21,7 +21,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return response()->view('product.create');
+        //
     }
 
     /**
@@ -29,7 +29,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // バリデーション
+        //
     }
 
     /**
@@ -45,7 +45,7 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        
+        return response()->view('expense.edit');
     }
 
     /**
@@ -56,7 +56,28 @@ class ProductController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function destroy(string $id)
+    {
+        //
+    }
+
+        public function years(string $id)
+    {
+        return response()->view('expense.yearexpense');
+    }
+
+    public function months(string $id)
+    {
+        return response()->view('expense.monthexpense');
+    }
+
+    public function days(string $id)
+    {
+        return response()->view('expense.dayexpense');
+    }
+
+    public function inputs(string $id)
+    {
+        return response()->view('expense.input');
+    }
 }
