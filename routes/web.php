@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ExpenseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +16,12 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::resource('product', ProductController::class);
-
+Route::resource('expense', ExpenseController::class);
+Route::get('/expense/yearexpense', 'ExpenseController@years')->name('expense.yearexpense');
+Route::get('/expense/monthexpense', 'ExpenseController@months')->name('expense.monthexpense');
+Route::get('/expense/dayexpense', 'ExpenseController@days')->name('expense.dayexpense');
+Route::get('/expense/input', 'ExpenseController@inputs')->name('expense.input');
+Route::get('/expense/edit', 'ExpenseController@edit')->name('expense.edit');
 Route::get('/', function () {
     return view('welcome');
 });
