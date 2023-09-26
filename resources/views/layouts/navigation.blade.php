@@ -19,21 +19,21 @@
 
                 <!-- 🔽 一覧ページへのリンクを追加 -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('expense.yearexpense')" :active="request()->routeIs('expense.yearexpense')">
+                    <x-nav-link :href="route('expense.year')" :active="request()->routeIs('expense.year')">
                         {{ __('年間支出') }}
                     </x-nav-link>
                 </div>
 
                 <!-- 🔽 一覧ページへのリンクを追加 -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('expense.monthexpense')" :active="request()->routeIs('expense.monthexpense')">
+                    <x-nav-link :href="route('expense.monthly')" :active="request()->routeIs('expense.monthly')">
                         {{ __('月間支出') }}
                     </x-nav-link>
                 </div>
 
                 <!-- 🔽 一覧ページへのリンクを追加 -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('expense.dayexpense')" :active="request()->routeIs('expense.dayexpense')">
+                    <x-nav-link :href="route('expense.dayly')" :active="request()->routeIs('expense.dayly')">
                         {{ __('１日支出') }}
                     </x-nav-link>
                 </div>
@@ -109,21 +109,21 @@
 
         <!-- 🔽 一覧ページへのリンクを追加 -->
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('expense.yearexpense')" :active="request()->routeIs('expense.yearexpense')">
+            <x-responsive-nav-link :href="route('expense.year')" :active="request()->routeIs('expense.year')">
                 {{ __('年間支出') }}
             </x-responsive-nav-link>
         </div>
 
         <!-- 🔽 一覧ページへのリンクを追加 -->
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('expense.monthexpense')" :active="request()->routeIs('expense.monthexpense')">
+            <x-responsive-nav-link :href="route('expense.monthly')" :active="request()->routeIs('expense.monthly')">
                 {{ __('月間支出') }}
             </x-responsive-nav-link>
         </div>
 
         <!-- 🔽 一覧ページへのリンクを追加 -->
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('expense.dayexpense')" :active="request()->routeIs('expense.dayexpense')">
+            <x-responsive-nav-link :href="route('expense.dayly')" :active="request()->routeIs('expense.dayly')">
                 {{ __('１日支出') }}
             </x-responsive-nav-link>
         </div>

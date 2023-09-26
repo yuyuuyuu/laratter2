@@ -61,22 +61,22 @@ class ExpenseController extends Controller
         //
     }
 
-        public function years(string $id)
+    public function year(string $id)
     {
-        return response()->view('expense.yearexpense');
+        return response()->view('expense.year');
     }
 
-    public function months(string $id)
+    public function month(string $id)
     {
-        return response()->view('expense.monthexpense');
+        return response()->view('expense.monthly');
     }
 
-    public function days(string $id)
+    public function day(string $id)
     {
-        return response()->view('expense.dayexpense');
+        return response()->view('expense.dayly');
     }
 
-    public function inputs(string $id)
+    public function input(string $id)
     {
         return response()->view('expense.input');
     }

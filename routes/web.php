@@ -15,13 +15,16 @@ use App\Http\Controllers\ExpenseController;
 |
 */
 
-Route::resource('product', ProductController::class);
 Route::resource('expense', ExpenseController::class);
-Route::get('/expense/yearexpense', 'ExpenseController@years')->name('expense.yearexpense');
-Route::get('/expense/monthexpense', 'ExpenseController@months')->name('expense.monthexpense');
-Route::get('/expense/dayexpense', 'ExpenseController@days')->name('expense.dayexpense');
-Route::get('/expense/input', 'ExpenseController@inputs')->name('expense.input');
-Route::get('/expense/edit', 'ExpenseController@edit')->name('expense.edit');
+Route::get('/expense/year', [ExpenseController,year])->name('expense.year');
+Route::get('/expense/monthly', 'App\Http\Controllers\ExpenseController@month')->name('expense.monthly');
+Route::get('/expense/dayly', 'App\Http\Controllers\ExpenseController@day')->name('expense.dayly');
+Route::get('/expense/input', 'App\Http\Controllers\ExpenseController@input')->name('expense.input');
+Route::get('/expense/edit', 'App\Http\Controllers\ExpenseController@edit')->name('expense.edit');
+Route::get('/expense/store', 'App\Http\Controllers\ExpenseController@store')->name('expense.store');
+/*
+Route::getするときにはcontrollerをつけるときにApp\Http\Controllersをcontrollerの前につけないといけないみたい！！
+*/
 Route::get('/', function () {
     return view('welcome');
 });
